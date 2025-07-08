@@ -19,14 +19,16 @@ def print_total_and_average(scores):
 def print_highest_score(scores):
     # works for both int and float
     max = float('-inf')
-    for score in scores:
+    max_index = -1
+    for index, score in enumerate(scores):
         if (score > max):
             max = score
-    print(f"The highest score is: {max}")
+            max_index = index
+    print(f"The highest score is: {max} is at {max_index}")
 
 
 if __name__ == "__main__":
-    scores = [20, 44, 7, 89, 80, 94, 79]
+    scores = [20, 44, 97, 89, 80, 94, 79]
     threshold = 80
     print(f"{count_students_above(scores, threshold)} students scored above {threshold}")
     print_total_and_average(scores)
