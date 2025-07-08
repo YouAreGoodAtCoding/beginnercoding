@@ -1,9 +1,9 @@
 def count_students_above(scores, threshold):
-    count = 0
+    cnt = 0
     for score in scores:
         if score > threshold:
-            count += 1
-    return count
+            cnt += 1
+    return cnt
 
 
 def print_total_and_average(scores):
