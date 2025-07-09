@@ -4,6 +4,7 @@ def isAlphaLib(c: str):
     return c.isalpha()
 
 
+# main challenge
 # if c is an alphabet it should fall between a and z as ascii code is in order
 def isAlpha(c: str):
     return 'a' <= c <= 'z' or 'A' <= c <= 'Z'
