@@ -15,7 +15,7 @@ def reverseNotEfficient(input: str):
     return rev
 
 
-# Warm up part 2
+# Warm up reverse part 2
 # time O(n), space O(n)
 # This is the most efficient and Pythonic way to reverse a string, if
 # you are not allowed to use slicing (s[::-1]) which has same complexities.
@@ -78,7 +78,6 @@ def isPalindromeInEfficient(input: str):
 
 ###
 # main challenge part 2
-# generic approach should work in any language
 ###
 def isPalindromeEfficient(input: str):
     input = normalize(input)
