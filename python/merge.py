@@ -20,11 +20,16 @@ def combineIntArrays(arr1: array, arr2: array):
 # main challenge
 # merge two sorted arrays
 # [1, 3, 5], [2, 4, 6] → [1, 2, 3, 4, 5, 6]
+# time O(n + m), where n and m are the lengths of the arrays.
+# space O(n + m)
 ###
 def mergeSortedIntArrays(arr1: array, arr2: array):
+    # preallocate sufficient space for efficiency
     size = len(arr1) + len(arr2)
     res = array.array('i', [0] * size)
     i1 = i2 = i = 0
+
+    # start looking at elements starting from first and which ever is lower, copy that over to res, and increment that pointer
     while (i1 < len(arr1) and i2 < len(arr2)):
         if (arr1[i1] <= arr2[i2]):
             res[i] = arr1[i1]
@@ -34,11 +39,13 @@ def mergeSortedIntArrays(arr1: array, arr2: array):
             i2 += 1
         i += 1
 
+    # if there are elements remaining in arr1, simply copy that over
     while (i1 < len(arr1)):
         res[i] = arr1[i1]
         i += 1
         i1 += 1
 
+    # if there are elements remaining in arr2, simply copy that over
     while (i2 < len(arr2)):
         res[i] = arr2[i2]
         i += 1
