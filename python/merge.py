@@ -1,7 +1,7 @@
 import array
 
 # warm up
-# More memory-efficient than lists for large amounts of homogeneous data, as it does not store pointers to objects.
+# Arrays are more memory-efficient than lists for large amounts of homogeneous data, as it does not store pointers to objects.
 
 
 def combineIntArrays(arr1: array, arr2: array):
