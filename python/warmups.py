@@ -18,6 +18,10 @@ def splitSentence(input: str):
         else:
             result_str_arr.append(''.join(temp_char_arr))
             temp_char_arr = []
+
+    # need to flush out the chars at the end.
+    result_str_arr.append(''.join(temp_char_arr))
+    temp_char_arr = []
     return result_str_arr
 
 
@@ -116,5 +120,25 @@ def testBinaryToDecimal():
     print(f"Binary {digits} is {output}")
 
 
+def fillPotHoles(heights):
+    max_height = float('-inf')
+    for height in heights:
+        if height > max_height:
+            max_height = height
+
+    units_of_asphalt = 0
+
+    for height in heights:
+        units_of_asphalt += max_height - height
+
+    return units_of_asphalt
+
+
+def testFillPotHoles():
+    heights = [2, 4, 8, 3]
+    output = fillPotHoles(heights)
+    print(f"we need {output} units of asphalt to even out the surface")
+
+
 if __name__ == '__main__':
-    testBinaryToDecimal()
+    testSplitSentence()
