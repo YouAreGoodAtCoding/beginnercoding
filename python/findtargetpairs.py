@@ -22,6 +22,7 @@ Given a list of numbers and a target,
 write a program that finds all pairs of numbers in the list that add up to the target.
 
 Time complexity: O(n^2)
+Space complexity: O(n)
 Returns:
     list of pairs as tuples
 """
@@ -63,6 +64,8 @@ def testCountFrequency():
 
 
 # main challenge
+# time complexity O(n)
+# space complexity O(n)
 def findTargetSumPairsUsingMaps(nums, target):
     seen_freq_map = {}
     target_pairs = []
