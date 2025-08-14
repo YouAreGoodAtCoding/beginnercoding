@@ -1,3 +1,4 @@
+# warm up
 # Takes a string and prints how many times each character appears.
 def countCharacters(word):
     char_freq = {}
@@ -40,6 +41,7 @@ def splitSentenceWithManySpaces(input: str):
     return result_str_arr
 
 
+# main challenge
 # Write a program that takes a sentence and prints how many times each word appears.
 def countWords(sentence):
     word_freq = {}
